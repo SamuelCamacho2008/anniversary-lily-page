@@ -27,16 +27,25 @@ const Index = () => {
   // Aquí puedes personalizar el contenido de la carta
   const letterContent = `Mi amor,
 
-Cada día a tu lado es un regalo que atesoro con todo mi corazón.
-Tú iluminas mi vida con tu sonrisa, tu risa y tu amor infinito.
+Cada día que pasa me siento el hombre más feliz del mundo teniéndote a ti a mi lado.
 
-Gracias por cada momento compartido, por cada abrazo,
-por cada palabra de aliento y por ser mi compañera perfecta.
+Este es nuestro primer mes. Sé que estamos a distancia, que queremos vernos día a día, que es difícil despertarnos y no poder vernos ni armar nuestros planes en un café. Pero aun así nos seguimos queriendo mucho, y la distancia no afecta nuestro amor tan poderoso. Espero que al leer esta carta me sientas a tu lado, como si yo te la estuviera leyendo acariciando tu pelo y dándote besitos en tu carita hermosa.
 
-Este aniversario celebramos no solo el tiempo que hemos pasado juntos,
-sino también todos los hermosos momentos que aún nos esperan.
+Hoy es un día especial, es nuestro primer mes. Así como desde el día uno iluminas mi vida con tu sonrisa, tu risa y tu amor infinito, quiero que sepas que te agradezco por todo lo que hiciste por mí al estar a mi lado a pesar de todo.
 
-Te amo más de lo que las palabras pueden expresar.`;
+Nosotros sabíamos lo que queríamos desde el día uno, y eso fue algo muy lindo: saber que íbamos a estar juntos formando una linda pareja.
+
+Tenemos claro que cuando nos veamos tú y yo no nos vamos a separar. Esos abrazos de oso, esos besos, se sentirán más fuertes que todos los que nos hemos dado, porque nos extrañamos y serán con mucha pasión.
+
+Ansío mucho verte y sé que falta poco para que suceda, para que los dos estemos abrazados y hagamos muchas cosas juntos.
+
+Te agradezco por amarme como soy, por aguantarme con mis cambios o los días que estoy triste. Agradezco todas las veces que piensas en mí. Ten por seguro que te cuidaré siempre, que estaré contigo pronto, y así como cumplimos nuestro primer mes, cumpliremos muchos más... muchos, muchos más, juntos y felices.
+
+Este mesecito lo celebramos pensando no solo en el tiempo que hemos pasado, sino también en todos los momentos hermosos que aún nos esperan.
+
+Te amo más de lo que las palabras pueden expresar.
+
+Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">

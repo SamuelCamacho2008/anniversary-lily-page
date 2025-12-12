@@ -5,6 +5,10 @@ import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
 import MusicPlayer from "@/components/MusicPlayer";
 import WelcomeScreen from "@/components/WelcomeScreen";
+import PhotoGallery from "@/components/PhotoGallery";
+import Promises from "@/components/Promises";
+import ReasonsToLove from "@/components/ReasonsToLove";
+import LoveMap from "@/components/LoveMap";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
@@ -26,6 +30,25 @@ import momento13 from "@/assets/momentos/momento-13.jpg";
 import momento14 from "@/assets/momentos/momento-14.jpg";
 import momento15 from "@/assets/momentos/momento-15.jpg";
 import momento16 from "@/assets/momentos/momento-16.jpg";
+
+const galleryPhotos = [
+  { src: momento1, title: "Momento especial" },
+  { src: momento2, title: "Juntos" },
+  { src: momento3, title: "Recuerdo bonito" },
+  { src: momento4, title: "Momentos felices" },
+  { src: momento5, title: "Nuestro tiempo" },
+  { src: momento6, title: "Amor" },
+  { src: momento7, title: "Sonrisas" },
+  { src: momento8, title: "Felicidad" },
+  { src: momento9, title: "Juntos siempre" },
+  { src: momento10, title: "Te amo" },
+  { src: momento11, title: "Mi vida" },
+  { src: momento12, title: "Contigo" },
+  { src: momento13, title: "Mi amor" },
+  { src: momento14, title: "Hermosos" },
+  { src: momento15, title: "Nosotros" },
+  { src: momento16, title: "Para siempre" },
+];
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
@@ -192,26 +215,45 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         <HeartDivider />
         
-        {/* Galería de momentos */}
+        {/* Galería de momentos con lightbox */}
         <section className="text-center mb-12">
           <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
-            Más de Nosotros
+            Nuestra Galería de Amor
           </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-            {[momento1, momento2, momento3, momento4, momento5, momento6, momento7, momento8, momento9, momento10, momento11, momento12, momento13, momento14, momento15, momento16].map((foto, index) => (
-              <div 
-                key={index}
-                className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 hover:scale-105 transition-all duration-300"
-              >
-                <img 
-                  src={foto} 
-                  alt={`Momento ${index + 1}`} 
-                  className="w-full h-40 object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <p className="font-elegant text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+            Cada foto es un tesoro, cada momento una bendición
+          </p>
+          <PhotoGallery photos={galleryPhotos} />
+        </section>
+        
+        <HeartDivider />
+        
+        {/* Razones por las que te amo */}
+        <section className="text-center mb-12">
+          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+            Razones por las que te amo
+          </h2>
+          <ReasonsToLove />
+        </section>
+        
+        <HeartDivider />
+        
+        {/* Promesas */}
+        <section className="text-center mb-12">
+          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+            Mis Promesas para Ti
+          </h2>
+          <Promises />
+        </section>
+        
+        <HeartDivider />
+        
+        {/* Mapa del amor */}
+        <section className="text-center mb-12">
+          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+            Nuestro Amor a la Distancia
+          </h2>
+          <LoveMap />
         </section>
         
         {/* Footer */}

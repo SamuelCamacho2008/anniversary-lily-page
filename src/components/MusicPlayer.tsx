@@ -1,29 +1,45 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, RefObject } from "react";
 import { Volume2, VolumeX, Music } from "lucide-react";
 
 interface MusicPlayerProps {
   audioSrc?: string;
   songTitle?: string;
+  audioRef?: RefObject<HTMLAudioElement>;
 }
 
-const MusicPlayer = ({ audioSrc, songTitle = "Música romántica" }: MusicPlayerProps) => {
+const MusicPlayer = ({ audioSrc, songTitle = "Música romántica", audioRef }: MusicPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+
+  // Sincronizar estado con el audio externo
+  useEffect(() => {
+    const audio = audioRef?.current;
+    if (!audio) return;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+
+    return () => {
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+    };
+  }, [audioRef]);
 
   const togglePlay = () => {
-    if (audioRef.current) {
+    if (audioRef?.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
         audioRef.current.play();
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
   const toggleMute = () => {
-    if (audioRef.current) {
+    if (audioRef?.current) {
       audioRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
     }
@@ -42,8 +58,6 @@ const MusicPlayer = ({ audioSrc, songTitle = "Música romántica" }: MusicPlayer
 
   return (
     <div className="fixed bottom-4 right-4 z-50 bg-card/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-lg border border-rose/20 flex items-center gap-3">
-      <audio ref={audioRef} src={audioSrc} loop />
-      
       <button
         onClick={togglePlay}
         className="w-10 h-10 rounded-full bg-rose/20 hover:bg-rose/30 flex items-center justify-center transition-colors"

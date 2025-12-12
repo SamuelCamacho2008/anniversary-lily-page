@@ -2,6 +2,7 @@ import { Heart, Sparkles } from "lucide-react";
 import LilyDecoration from "@/components/LilyDecoration";
 import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
+import MusicPlayer from "@/components/MusicPlayer";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
@@ -198,6 +199,9 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           </p>
         </footer>
       </main>
+      
+      {/* Music Player - sube tu archivo MP3 a src/assets/musica.mp3 */}
+      <MusicPlayer songTitle="Preso en la cárcel de tus besos - José José" />
     </div>
   );
 };

@@ -16,6 +16,12 @@ import momento7 from "@/assets/momentos/momento-7.jpg";
 import momento8 from "@/assets/momentos/momento-8.jpg";
 import momento9 from "@/assets/momentos/momento-9.jpg";
 import momento10 from "@/assets/momentos/momento-10.jpg";
+import momento11 from "@/assets/momentos/momento-11.jpg";
+import momento12 from "@/assets/momentos/momento-12.jpg";
+import momento13 from "@/assets/momentos/momento-13.jpg";
+import momento14 from "@/assets/momentos/momento-14.jpg";
+import momento15 from "@/assets/momentos/momento-15.jpg";
+import momento16 from "@/assets/momentos/momento-16.jpg";
 
 const Index = () => {
   // Aquí puedes personalizar el contenido de la carta
@@ -161,7 +167,7 @@ Te amo más de lo que las palabras pueden expresar.`;
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-            {[momento1, momento2, momento3, momento4, momento5, momento6, momento7, momento8, momento9, momento10].map((foto, index) => (
+            {[momento1, momento2, momento3, momento4, momento5, momento6, momento7, momento8, momento9, momento10, momento11, momento12, momento13, momento14, momento15, momento16].map((foto, index) => (
               <div 
                 key={index}
                 className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 hover:scale-105 transition-all duration-300"

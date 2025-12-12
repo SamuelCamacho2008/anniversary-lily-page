@@ -5,6 +5,17 @@ import HeartDivider from "@/components/HeartDivider";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
+import gatosFuturo from "@/assets/gatos-futuro.png";
+import momento1 from "@/assets/momentos/momento-1.jpg";
+import momento2 from "@/assets/momentos/momento-2.jpg";
+import momento3 from "@/assets/momentos/momento-3.jpg";
+import momento4 from "@/assets/momentos/momento-4.jpg";
+import momento5 from "@/assets/momentos/momento-5.jpg";
+import momento6 from "@/assets/momentos/momento-6.jpg";
+import momento7 from "@/assets/momentos/momento-7.jpg";
+import momento8 from "@/assets/momentos/momento-8.jpg";
+import momento9 from "@/assets/momentos/momento-9.jpg";
+import momento10 from "@/assets/momentos/momento-10.jpg";
 
 const Index = () => {
   // Aquí puedes personalizar el contenido de la carta
@@ -122,16 +133,46 @@ Te amo más de lo que las palabras pueden expresar.`;
               </div>
             </div>
             
-            {/* Planes futuros */}
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
-              <Heart className="w-8 h-8 text-rose/40 mx-auto mb-4" />
-              <h3 className="font-elegant text-lg font-semibold text-foreground mb-2">
-                Planes futuros
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Próximamente...
-              </p>
+            {/* Planes futuros - Gatos */}
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+              <img 
+                src={gatosFuturo} 
+                alt="Nuestros futuros gatitos" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-elegant text-lg font-semibold text-foreground mb-2">
+                  Nuestros futuros gatitos 🐱
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Un gato negro y uno blanco
+                </p>
+              </div>
             </div>
+          </div>
+        </section>
+        
+        <HeartDivider />
+        
+        {/* Galería de momentos */}
+        <section className="text-center mb-12">
+          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+            Más de Nosotros
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {[momento1, momento2, momento3, momento4, momento5, momento6, momento7, momento8, momento9, momento10].map((foto, index) => (
+              <div 
+                key={index}
+                className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 hover:scale-105 transition-all duration-300"
+              >
+                <img 
+                  src={foto} 
+                  alt={`Momento ${index + 1}`} 
+                  className="w-full h-40 object-cover"
+                />
+              </div>
+            ))}
           </div>
         </section>
         

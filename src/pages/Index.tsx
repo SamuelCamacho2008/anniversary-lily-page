@@ -1,12 +1,15 @@
+import { useState, useRef } from "react";
 import { Heart, Sparkles } from "lucide-react";
 import LilyDecoration from "@/components/LilyDecoration";
 import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
 import MusicPlayer from "@/components/MusicPlayer";
+import WelcomeScreen from "@/components/WelcomeScreen";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
 import gatosFuturo from "@/assets/gatos-futuro.png";
+import musica from "@/assets/musica.mp3";
 import momento1 from "@/assets/momentos/momento-1.jpg";
 import momento2 from "@/assets/momentos/momento-2.jpg";
 import momento3 from "@/assets/momentos/momento-3.jpg";
@@ -25,6 +28,25 @@ import momento15 from "@/assets/momentos/momento-15.jpg";
 import momento16 from "@/assets/momentos/momento-16.jpg";
 
 const Index = () => {
+  const [showContent, setShowContent] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const handleEnter = () => {
+    setShowContent(true);
+    // Reproducir música automáticamente al entrar
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+
+  if (!showContent) {
+    return (
+      <>
+        <audio ref={audioRef} src={musica} loop />
+        <WelcomeScreen onEnter={handleEnter} />
+      </>
+    );
+  }
   // Aquí puedes personalizar el contenido de la carta
   const letterContent = `Mi amor,
 
@@ -200,8 +222,8 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         </footer>
       </main>
       
-      {/* Music Player - sube tu archivo MP3 a src/assets/musica.mp3 */}
-      <MusicPlayer songTitle="Preso en la cárcel de tus besos - José José" />
+      {/* Music Player */}
+      <MusicPlayer audioSrc={musica} songTitle="Preso en la cárcel de tus besos - José José" audioRef={audioRef} />
     </div>
   );
 };

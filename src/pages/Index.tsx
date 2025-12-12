@@ -3,6 +3,8 @@ import LilyDecoration from "@/components/LilyDecoration";
 import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
 import lilyDecoration from "@/assets/lily-decoration.png";
+import primerEncuentro from "@/assets/primer-encuentro.jpg";
+import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
 
 const Index = () => {
   // Aquí puedes personalizar el contenido de la carta
@@ -46,7 +48,7 @@ Te amo más de lo que las palabras pueden expresar.`;
           </div>
           
           <h1 className="font-romantic text-5xl md:text-7xl lg:text-8xl text-rose mb-4">
-            Feliz Aniversario
+            Primer mes juntos
           </h1>
           
           <p className="font-elegant text-xl md:text-2xl text-muted-foreground italic">
@@ -90,22 +92,46 @@ Te amo más de lo que las palabras pueden expresar.`;
             fechas importantes o cualquier otro contenido que quieras compartir.
           </p>
           
-          {/* Placeholder cards for future content */}
+          {/* Photo cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
-            {["Nuestro primer encuentro", "Momentos favoritos", "Planes futuros"].map((title, index) => (
-              <div 
-                key={index}
-                className="bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300"
-              >
-                <Heart className="w-8 h-8 text-rose/40 mx-auto mb-4" />
+            {/* Primer encuentro */}
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+              <img 
+                src={primerEncuentro} 
+                alt="Nuestro primer encuentro" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
                 <h3 className="font-elegant text-lg font-semibold text-foreground mb-2">
-                  {title}
+                  Nuestro primer encuentro
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  Próximamente...
-                </p>
               </div>
-            ))}
+            </div>
+            
+            {/* Momentos favoritos */}
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+              <img 
+                src={momentosFavoritos} 
+                alt="Momentos favoritos" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-elegant text-lg font-semibold text-foreground mb-2">
+                  Momentos favoritos
+                </h3>
+              </div>
+            </div>
+            
+            {/* Planes futuros */}
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+              <Heart className="w-8 h-8 text-rose/40 mx-auto mb-4" />
+              <h3 className="font-elegant text-lg font-semibold text-foreground mb-2">
+                Planes futuros
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Próximamente...
+              </p>
+            </div>
           </div>
         </section>
         

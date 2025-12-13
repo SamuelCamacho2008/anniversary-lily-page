@@ -30,6 +30,11 @@ import momento13 from "@/assets/momentos/momento-13.jpg";
 import momento14 from "@/assets/momentos/momento-14.jpg";
 import momento15 from "@/assets/momentos/momento-15.jpg";
 import momento16 from "@/assets/momentos/momento-16.jpg";
+import momento17 from "@/assets/momentos/momento-17.jpg";
+import momento18 from "@/assets/momentos/momento-18.jpg";
+import momento19 from "@/assets/momentos/momento-19.jpg";
+import momento20 from "@/assets/momentos/momento-20.jpg";
+import momento21 from "@/assets/momentos/momento-21.jpg";
 
 const galleryPhotos = [
   { src: momento1, title: "Momento especial" },
@@ -48,6 +53,11 @@ const galleryPhotos = [
   { src: momento14, title: "Hermosos" },
   { src: momento15, title: "Nosotros" },
   { src: momento16, title: "Para siempre" },
+  { src: momento17, title: "Besitos" },
+  { src: momento18, title: "Juntos tú y yo" },
+  { src: momento19, title: "Momentos juntos" },
+  { src: momento20, title: "Mi persona favorita" },
+  { src: momento21, title: "Noche de peli" },
 ];
 
 const Index = () => {

@@ -22,7 +22,7 @@ const LoveMap = () => {
                 </div>
               </div>
               <p className="mt-3 font-elegant text-lg font-semibold text-foreground">Yo</p>
-              <p className="text-sm text-muted-foreground">Mi ubicación</p>
+              <p className="text-sm text-muted-foreground">Suaza, Huila</p>
             </div>
 
             {/* Connection line with heart */}
@@ -48,7 +48,7 @@ const LoveMap = () => {
                 </div>
               </div>
               <p className="mt-3 font-elegant text-lg font-semibold text-foreground">Tú</p>
-              <p className="text-sm text-muted-foreground">Tu ubicación</p>
+              <p className="text-sm text-muted-foreground">Imués, Nariño</p>
             </div>
           </div>
 
@@ -67,8 +67,8 @@ const LoveMap = () => {
           {/* Stats */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="text-center bg-card/50 rounded-xl p-4 border border-rose/10">
-              <p className="font-romantic text-3xl text-rose">∞</p>
-              <p className="text-sm text-muted-foreground font-elegant">Amor sin límites</p>
+              <p className="font-romantic text-3xl text-rose">383 km</p>
+              <p className="text-sm text-muted-foreground font-elegant">De distancia</p>
             </div>
             <div className="text-center bg-card/50 rounded-xl p-4 border border-rose/10">
               <p className="font-romantic text-3xl text-rose">24/7</p>

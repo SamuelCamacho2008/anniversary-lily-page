@@ -9,6 +9,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import Promises from "@/components/Promises";
 import ReasonsToLove from "@/components/ReasonsToLove";
 import LoveMap from "@/components/LoveMap";
+import FlipCard from "@/components/FlipCard";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
@@ -255,6 +256,11 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           </h2>
           <Promises />
         </section>
+        
+        <HeartDivider />
+        
+        {/* Tarjeta interactiva - Mis Ojos */}
+        <FlipCard />
         
         <HeartDivider />
         

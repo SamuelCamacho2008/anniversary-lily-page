@@ -10,6 +10,7 @@ import Promises from "@/components/Promises";
 import ReasonsToLove from "@/components/ReasonsToLove";
 import LoveMap from "@/components/LoveMap";
 import FlipCard from "@/components/FlipCard";
+import FirstLetter from "@/components/FirstLetter";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
@@ -271,6 +272,11 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           </h2>
           <LoveMap />
         </section>
+        
+        <HeartDivider />
+        
+        {/* Primera carta */}
+        <FirstLetter />
         
         {/* Footer */}
         <footer className="text-center pt-8 pb-4">

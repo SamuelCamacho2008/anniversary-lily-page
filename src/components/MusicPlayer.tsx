@@ -1,4 +1,4 @@
-import { useState, useEffect, RefObject } from "react";
+import { useState, useEffect, forwardRef, RefObject } from "react";
 import { Volume2, VolumeX, Music } from "lucide-react";
 
 interface MusicPlayerProps {
@@ -7,7 +7,7 @@ interface MusicPlayerProps {
   audioRef?: RefObject<HTMLAudioElement>;
 }
 
-const MusicPlayer = ({ audioSrc, songTitle = "Música romántica", audioRef }: MusicPlayerProps) => {
+const MusicPlayer = forwardRef<HTMLDivElement, MusicPlayerProps>(({ audioSrc, songTitle = "Música romántica", audioRef }, ref) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
@@ -90,6 +90,8 @@ const MusicPlayer = ({ audioSrc, songTitle = "Música romántica", audioRef }: M
       </button>
     </div>
   );
-};
+});
+
+MusicPlayer.displayName = "MusicPlayer";
 
 export default MusicPlayer;

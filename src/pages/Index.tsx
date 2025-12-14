@@ -11,6 +11,7 @@ import ReasonsToLove from "@/components/ReasonsToLove";
 import LoveMap from "@/components/LoveMap";
 import FlipCard from "@/components/FlipCard";
 import FirstLetter from "@/components/FirstLetter";
+import RelationshipTimeline from "@/components/RelationshipTimeline";
 import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
@@ -162,6 +163,11 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
             signature="Con todo mi amor ❤️"
           />
         </section>
+        
+        <HeartDivider />
+        
+        {/* Línea del tiempo */}
+        <RelationshipTimeline />
         
         <HeartDivider />
         

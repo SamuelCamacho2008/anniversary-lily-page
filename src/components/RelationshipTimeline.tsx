@@ -9,27 +9,27 @@ interface TimelineEvent {
 
 const defaultEvents: TimelineEvent[] = [
   {
-    date: "El día que nos conocimos",
+    date: "El día que todo cambió",
     title: "Nuestro Primer Encuentro",
-    description: "El destino nos cruzó y desde ese momento todo cambió",
+    description: "Fue solo verte y ya... En ese instante supe que eras especial",
     icon: "star"
   },
   {
-    date: "Cuando todo empezó",
+    date: "Mensajes que lo cambiaron todo",
     title: "Nuestra Primera Conversación",
-    description: "Las palabras fluyeron como si nos conociéramos de siempre",
+    description: "Un simple mensaje en Instagram fue el inicio de algo hermoso",
     icon: "calendar"
   },
   {
-    date: "Un momento especial",
+    date: "11 de Septiembre",
     title: "Nuestra Primera Cita",
-    description: "Los nervios, las risas, y el comienzo de algo hermoso",
+    description: "Un café, luego el cine, después comimos juntos... Desde ese día me enamoré de ti",
     icon: "heart"
   },
   {
-    date: "El día más feliz",
+    date: "15 de Noviembre",
     title: "Nos Hicimos Novios",
-    description: "Oficialmente juntos, el inicio de nuestra historia de amor",
+    description: "En aquella cabaña te pedí que fueras mi novia, el día más feliz de mi vida",
     icon: "heart"
   },
   {

@@ -13,7 +13,7 @@ const SpotifyQR = ({
 }: SpotifyQRProps) => {
   // Spotify Code/QR URL - using Spotify's scan code API
   const spotifyUri = "spotify:track:3h5xfChxSnuaNRHCBKSyEC";
-  const spotifyCodeUrl = `https://scannables.scdn.co/uri/plain/png/fff0e6/black/256/${spotifyUri}`;
+  const spotifyCodeUrl = `https://scannables.scdn.co/uri/plain/png/fce7d9/black/320/${spotifyUri}`;
 
   return (
     <div className="fixed bottom-4 right-4 z-50">

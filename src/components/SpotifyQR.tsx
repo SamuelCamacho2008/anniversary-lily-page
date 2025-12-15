@@ -7,13 +7,13 @@ interface SpotifyQRProps {
 }
 
 const SpotifyQR = ({ 
-  songTitle = "Cigarettes Out the Window", 
-  artist = "TV Girl",
-  spotifyUrl = "https://open.spotify.com/track/3h5xfChxSnuaNRHCBKSyEC"
+  songTitle = "Amor Mío", 
+  artist = "Frank Sark",
+  spotifyUrl = "https://open.spotify.com/track/5m7Squ2AWGw3wmknxAodKE"
 }: SpotifyQRProps) => {
   // Spotify Code/QR URL - using Spotify's scan code API
-  const spotifyUri = "spotify:track:3h5xfChxSnuaNRHCBKSyEC";
-  const spotifyCodeUrl = `https://scannables.scdn.co/uri/plain/png/fce7d9/black/320/${spotifyUri}`;
+  const spotifyUri = "spotify:track:5m7Squ2AWGw3wmknxAodKE";
+  const spotifyCodeUrl = `https://scannables.scdn.co/uri/plain/png/fff0e6/black/256/${spotifyUri}`;
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -30,7 +30,7 @@ const SpotifyQR = ({
               <Music className="w-4 h-4 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-xs text-muted-foreground font-elegant">Nuestra canción</p>
+              <p className="text-xs text-muted-foreground font-elegant">Una canción para ti</p>
               <p className="text-sm font-elegant font-semibold text-foreground leading-tight">{songTitle}</p>
               <p className="text-xs text-rose">{artist}</p>
             </div>

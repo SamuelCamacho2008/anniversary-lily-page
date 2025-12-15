@@ -117,27 +117,32 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           <div className="flex justify-center mb-6">
             <div className="relative">
               {/* Iconos decorativos alrededor del corazón */}
-              <Star className="absolute -top-4 -left-8 w-4 h-4 text-gold animate-pulse" />
-              <Sparkles className="absolute -top-2 -left-5 w-5 h-5 text-gold/80 animate-pulse" style={{ animationDelay: "0.3s" }} />
-              <Moon className="absolute top-0 -left-10 w-3 h-3 text-cafe/60 animate-pulse" style={{ animationDelay: "0.6s" }} />
+              <Star className="absolute -top-4 -left-8 w-4 h-4 text-gold animate-sparkle" />
+              <Sparkles className="absolute -top-2 -left-5 w-5 h-5 text-gold/80 animate-twinkle" style={{ animationDelay: "0.3s" }} />
+              <Moon className="absolute top-0 -left-10 w-3 h-3 text-cafe/60 animate-drift" style={{ animationDelay: "0.6s" }} />
               
               <Heart className="w-16 h-16 text-cafe fill-cafe/30 animate-heartbeat" />
               
-              <Sparkles className="absolute -top-2 -right-5 w-5 h-5 text-gold/80 animate-pulse" style={{ animationDelay: "0.2s" }} />
-              <Star className="absolute -top-4 -right-8 w-4 h-4 text-gold animate-pulse" style={{ animationDelay: "0.5s" }} />
-              <Sun className="absolute top-0 -right-10 w-3 h-3 text-gold/60 animate-pulse" style={{ animationDelay: "0.8s" }} />
+              <Sparkles className="absolute -top-2 -right-5 w-5 h-5 text-gold/80 animate-twinkle" style={{ animationDelay: "0.2s" }} />
+              <Star className="absolute -top-4 -right-8 w-4 h-4 text-gold animate-sparkle" style={{ animationDelay: "0.5s" }} />
+              <Sun className="absolute top-0 -right-10 w-3 h-3 text-gold/60 animate-float-rotate" style={{ animationDelay: "0.8s" }} />
               
               {/* Detalles extra */}
-              <Flower2 className="absolute -bottom-2 -left-6 w-4 h-4 text-lily-green/70 animate-bounce" style={{ animationDelay: "1s" }} />
-              <Flower2 className="absolute -bottom-2 -right-6 w-4 h-4 text-lily-green/70 animate-bounce" style={{ animationDelay: "1.2s" }} />
+              <Flower2 className="absolute -bottom-2 -left-6 w-4 h-4 text-lily-green/70 animate-sway" style={{ animationDelay: "1s" }} />
+              <Flower2 className="absolute -bottom-2 -right-6 w-4 h-4 text-lily-green/70 animate-sway" style={{ animationDelay: "1.5s" }} />
+              
+              {/* Glow effect behind heart */}
+              <div className="absolute inset-0 bg-cafe/20 rounded-full blur-xl animate-glow-pulse -z-10" />
             </div>
           </div>
           
           {/* Línea decorativa superior */}
           <div className="flex items-center justify-center gap-3 mb-4">
+            <Star className="w-3 h-3 text-gold/40 animate-twinkle" style={{ animationDelay: "0.2s" }} />
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-cafe/40" />
-            <Coffee className="w-4 h-4 text-cafe/60" />
+            <Coffee className="w-4 h-4 text-cafe/60 animate-float-rotate" />
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-cafe/40" />
+            <Star className="w-3 h-3 text-gold/40 animate-twinkle" style={{ animationDelay: "0.4s" }} />
           </div>
           
           <h1 className="font-romantic text-5xl md:text-7xl lg:text-8xl text-cafe mb-4">
@@ -150,11 +155,13 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           
           {/* Línea decorativa inferior */}
           <div className="flex items-center justify-center gap-2 mt-4">
-            <Star className="w-3 h-3 text-gold/50" />
-            <div className="h-px w-20 bg-cafe/20" />
-            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20" />
-            <div className="h-px w-20 bg-cafe/20" />
-            <Star className="w-3 h-3 text-gold/50" />
+            <Star className="w-3 h-3 text-gold/50 animate-sparkle" />
+            <Sparkles className="w-3 h-3 text-cafe/30 animate-twinkle" style={{ animationDelay: "0.3s" }} />
+            <div className="h-px w-16 bg-cafe/20" />
+            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20 animate-heartbeat" style={{ animationDelay: "0.5s" }} />
+            <div className="h-px w-16 bg-cafe/20" />
+            <Sparkles className="w-3 h-3 text-cafe/30 animate-twinkle" style={{ animationDelay: "0.6s" }} />
+            <Star className="w-3 h-3 text-gold/50 animate-sparkle" style={{ animationDelay: "0.2s" }} />
           </div>
         </section>
         
@@ -304,17 +311,21 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         {/* Footer */}
         <footer className="text-center pt-8 pb-4">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <Star className="w-3 h-3 text-gold/40" />
-            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20" />
-            <Star className="w-3 h-3 text-gold/40" />
+            <Star className="w-3 h-3 text-gold/40 animate-sparkle" />
+            <Sparkles className="w-3 h-3 text-cafe/30 animate-twinkle" style={{ animationDelay: "0.2s" }} />
+            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20 animate-heartbeat" />
+            <Sparkles className="w-3 h-3 text-cafe/30 animate-twinkle" style={{ animationDelay: "0.4s" }} />
+            <Star className="w-3 h-3 text-gold/40 animate-sparkle" style={{ animationDelay: "0.3s" }} />
           </div>
           <p className="font-romantic text-2xl text-cafe/70">
             Te amo infinitamente
           </p>
           <div className="flex items-center justify-center gap-2 mt-3">
-            <Flower2 className="w-4 h-4 text-lily-green/50" />
-            <BookHeart className="w-4 h-4 text-cafe/40" />
-            <Flower2 className="w-4 h-4 text-lily-green/50" />
+            <Flower2 className="w-4 h-4 text-lily-green/50 animate-sway" />
+            <Moon className="w-3 h-3 text-cafe/30 animate-drift" />
+            <BookHeart className="w-4 h-4 text-cafe/40 animate-float-rotate" />
+            <Sun className="w-3 h-3 text-gold/30 animate-float-rotate" style={{ animationDelay: "0.5s" }} />
+            <Flower2 className="w-4 h-4 text-lily-green/50 animate-sway" style={{ animationDelay: "0.5s" }} />
           </div>
         </footer>
       </main>

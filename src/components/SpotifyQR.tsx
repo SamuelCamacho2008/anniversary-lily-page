@@ -7,12 +7,12 @@ interface SpotifyQRProps {
 }
 
 const SpotifyQR = ({ 
-  songTitle = "Amor Mío", 
-  artist = "Frank Sark",
-  spotifyUrl = "https://open.spotify.com/track/5m7Squ2AWGw3wmknxAodKE"
+  songTitle = "Cigarettes Out the Window", 
+  artist = "TV Girl",
+  spotifyUrl = "https://open.spotify.com/track/3h5xfChxSnuaNRHCBKSyEC"
 }: SpotifyQRProps) => {
   // Spotify Code/QR URL - using Spotify's scan code API
-  const spotifyUri = "spotify:track:5m7Squ2AWGw3wmknxAodKE";
+  const spotifyUri = "spotify:track:3h5xfChxSnuaNRHCBKSyEC";
   const spotifyCodeUrl = `https://scannables.scdn.co/uri/plain/png/fff0e6/black/256/${spotifyUri}`;
 
   return (

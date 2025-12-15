@@ -1,4 +1,4 @@
-import { Music, Heart, ExternalLink } from "lucide-react";
+import { Music, Heart, ExternalLink, Star } from "lucide-react";
 
 interface SpotifyQRProps {
   songTitle?: string;
@@ -20,10 +20,10 @@ const SpotifyQR = ({
       {/* Decorative container */}
       <div className="relative group">
         {/* Glow effect */}
-        <div className="absolute -inset-2 bg-gradient-to-r from-rose/30 via-gold/30 to-rose/30 rounded-3xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute -inset-2 bg-gradient-to-r from-cafe/30 via-gold/30 to-cafe/30 rounded-3xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
         
         {/* Main card */}
-        <div className="relative bg-gradient-to-br from-card via-card/95 to-rose/10 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-rose/20 hover:border-rose/40 transition-all duration-300">
+        <div className="relative bg-gradient-to-br from-card via-card/95 to-cafe/10 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-cafe/20 hover:border-cafe/40 transition-all duration-300">
           {/* Header with music icon */}
           <div className="flex items-center gap-2 mb-3">
             <div className="w-8 h-8 rounded-full bg-[#1DB954] flex items-center justify-center">
@@ -32,9 +32,9 @@ const SpotifyQR = ({
             <div className="flex-1">
               <p className="text-xs text-muted-foreground font-elegant">Una canción para ti</p>
               <p className="text-sm font-elegant font-semibold text-foreground leading-tight">{songTitle}</p>
-              <p className="text-xs text-rose">{artist}</p>
+              <p className="text-xs text-cafe">{artist}</p>
             </div>
-            <Heart className="w-4 h-4 text-rose fill-rose/50 animate-pulse" />
+            <Heart className="w-4 h-4 text-cafe fill-cafe/50 animate-pulse" />
           </div>
           
           {/* QR Code Container */}
@@ -45,16 +45,16 @@ const SpotifyQR = ({
             className="block relative group/qr"
           >
             {/* Decorative frame */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-rose/20 via-transparent to-gold/20 rounded-xl" />
+            <div className="absolute -inset-1 bg-gradient-to-br from-cafe/20 via-transparent to-gold/20 rounded-xl" />
             
             {/* Corner decorations */}
-            <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-rose/60 rounded-tl-lg" />
-            <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-rose/60 rounded-tr-lg" />
-            <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-rose/60 rounded-bl-lg" />
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-rose/60 rounded-br-lg" />
+            <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-cafe/60 rounded-tl-lg" />
+            <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-cafe/60 rounded-tr-lg" />
+            <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-cafe/60 rounded-bl-lg" />
+            <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-cafe/60 rounded-br-lg" />
             
             {/* QR Code */}
-            <div className="relative bg-[#fff0e6] rounded-lg p-2 overflow-hidden">
+            <div className="relative bg-[#fff8f0] rounded-lg p-2 overflow-hidden">
               <img 
                 src={spotifyCodeUrl}
                 alt={`Spotify code para ${songTitle}`}
@@ -62,9 +62,9 @@ const SpotifyQR = ({
               />
               
               {/* Hover overlay */}
-              <div className="absolute inset-0 bg-rose/10 opacity-0 group-hover/qr:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg">
+              <div className="absolute inset-0 bg-cafe/10 opacity-0 group-hover/qr:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg">
                 <div className="bg-card/90 px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
-                  <ExternalLink className="w-3 h-3 text-rose" />
+                  <ExternalLink className="w-3 h-3 text-cafe" />
                   <span className="text-xs font-elegant text-foreground">Abrir en Spotify</span>
                 </div>
               </div>
@@ -76,12 +76,13 @@ const SpotifyQR = ({
             Escanea con la app de Spotify ♪
           </p>
           
-          {/* Floating hearts decoration */}
-          <div className="absolute -top-2 -right-2 text-rose/40 animate-bounce" style={{ animationDelay: "0s" }}>
-            ♥
+          {/* Floating decorations */}
+          <div className="absolute -top-2 -right-2 text-cafe/40 animate-bounce" style={{ animationDelay: "0s" }}>
+            🤎
           </div>
-          <div className="absolute -bottom-1 -left-2 text-rose/30 animate-bounce" style={{ animationDelay: "0.5s" }}>
-            ♥
+          <Star className="absolute -top-3 -left-1 w-3 h-3 text-gold/50 animate-pulse" />
+          <div className="absolute -bottom-1 -left-2 text-cafe/30 animate-bounce" style={{ animationDelay: "0.5s" }}>
+            🤎
           </div>
         </div>
       </div>

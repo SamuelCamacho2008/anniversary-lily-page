@@ -75,6 +75,11 @@ export default {
           DEFAULT: "hsl(var(--lily-green))",
           light: "hsl(var(--lily-light))",
         },
+        cafe: {
+          DEFAULT: "hsl(var(--cafe))",
+          light: "hsl(var(--cafe-light))",
+        },
+        chocolate: "hsl(var(--chocolate))",
       },
       borderRadius: {
         lg: "var(--radius)",

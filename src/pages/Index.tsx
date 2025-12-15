@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, Star, Moon, Sun, Flower2, Coffee, Music, BookHeart } from "lucide-react";
 import LilyDecoration from "@/components/LilyDecoration";
 import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
@@ -116,19 +116,46 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         <section className="text-center mb-16 animate-fade-in-up">
           <div className="flex justify-center mb-6">
             <div className="relative">
-              <Sparkles className="absolute -top-2 -left-6 w-5 h-5 text-gold animate-pulse" />
-              <Heart className="w-16 h-16 text-rose fill-rose/30 animate-heartbeat" />
-              <Sparkles className="absolute -top-2 -right-6 w-5 h-5 text-gold animate-pulse" />
+              {/* Iconos decorativos alrededor del corazón */}
+              <Star className="absolute -top-4 -left-8 w-4 h-4 text-gold animate-pulse" />
+              <Sparkles className="absolute -top-2 -left-5 w-5 h-5 text-gold/80 animate-pulse" style={{ animationDelay: "0.3s" }} />
+              <Moon className="absolute top-0 -left-10 w-3 h-3 text-cafe/60 animate-pulse" style={{ animationDelay: "0.6s" }} />
+              
+              <Heart className="w-16 h-16 text-cafe fill-cafe/30 animate-heartbeat" />
+              
+              <Sparkles className="absolute -top-2 -right-5 w-5 h-5 text-gold/80 animate-pulse" style={{ animationDelay: "0.2s" }} />
+              <Star className="absolute -top-4 -right-8 w-4 h-4 text-gold animate-pulse" style={{ animationDelay: "0.5s" }} />
+              <Sun className="absolute top-0 -right-10 w-3 h-3 text-gold/60 animate-pulse" style={{ animationDelay: "0.8s" }} />
+              
+              {/* Detalles extra */}
+              <Flower2 className="absolute -bottom-2 -left-6 w-4 h-4 text-lily-green/70 animate-bounce" style={{ animationDelay: "1s" }} />
+              <Flower2 className="absolute -bottom-2 -right-6 w-4 h-4 text-lily-green/70 animate-bounce" style={{ animationDelay: "1.2s" }} />
             </div>
           </div>
           
-          <h1 className="font-romantic text-5xl md:text-7xl lg:text-8xl text-rose mb-4">
+          {/* Línea decorativa superior */}
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-cafe/40" />
+            <Coffee className="w-4 h-4 text-cafe/60" />
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-cafe/40" />
+          </div>
+          
+          <h1 className="font-romantic text-5xl md:text-7xl lg:text-8xl text-cafe mb-4">
             Primer mes juntos
           </h1>
           
           <p className="font-elegant text-xl md:text-2xl text-muted-foreground italic">
             Un día especial para celebrar nuestro amor
           </p>
+          
+          {/* Línea decorativa inferior */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <Star className="w-3 h-3 text-gold/50" />
+            <div className="h-px w-20 bg-cafe/20" />
+            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20" />
+            <div className="h-px w-20 bg-cafe/20" />
+            <Star className="w-3 h-3 text-gold/50" />
+          </div>
         </section>
         
         {/* Lily image decoration */}
@@ -144,13 +171,13 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Letter section */}
         <section className="mb-16 animate-fade-in-up-delay-2">
-          <h2 className="font-romantic text-3xl md:text-4xl text-center text-rose mb-8">
+          <h2 className="font-romantic text-3xl md:text-4xl text-center text-cafe mb-8">
             Para ti, mi amor
           </h2>
           
           <LoveLetter 
             content={letterContent}
-            signature="Con todo mi amor ❤️"
+            signature="Con todo mi amor 🤎"
           />
         </section>
         
@@ -163,7 +190,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Details section - placeholder for more content */}
         <section className="text-center mb-12">
-          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+          <h2 className="font-romantic text-3xl md:text-4xl text-cafe mb-6">
             Nuestros Momentos
           </h2>
           
@@ -175,7 +202,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
           {/* Photo cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
             {/* Primer encuentro */}
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-cafe/10 hover:border-cafe/30 transition-colors duration-300">
               <img 
                 src={primerEncuentro} 
                 alt="Nuestro primer encuentro" 
@@ -189,7 +216,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
             </div>
             
             {/* Momentos favoritos */}
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-cafe/10 hover:border-cafe/30 transition-colors duration-300">
               <img 
                 src={momentosFavoritos} 
                 alt="Momentos favoritos" 
@@ -203,7 +230,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
             </div>
             
             {/* Planes futuros - Gatos */}
-            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-rose/10 hover:border-rose/30 transition-colors duration-300">
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-md border border-cafe/10 hover:border-cafe/30 transition-colors duration-300">
               <img 
                 src={gatosFuturo} 
                 alt="Nuestros futuros gatitos" 
@@ -225,7 +252,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Galería de momentos con lightbox */}
         <section className="text-center mb-12">
-          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+          <h2 className="font-romantic text-3xl md:text-4xl text-cafe mb-6">
             Nuestra Galería de Amor
           </h2>
           <p className="font-elegant text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -238,7 +265,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Razones por las que te amo */}
         <section className="text-center mb-12">
-          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+          <h2 className="font-romantic text-3xl md:text-4xl text-cafe mb-6">
             Razones por las que te amo
           </h2>
           <ReasonsToLove />
@@ -248,7 +275,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Promesas */}
         <section className="text-center mb-12">
-          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+          <h2 className="font-romantic text-3xl md:text-4xl text-cafe mb-6">
             Mis Promesas para Ti
           </h2>
           <Promises />
@@ -263,7 +290,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Mapa del amor */}
         <section className="text-center mb-12">
-          <h2 className="font-romantic text-3xl md:text-4xl text-rose mb-6">
+          <h2 className="font-romantic text-3xl md:text-4xl text-cafe mb-6">
             Nuestro Amor a la Distancia
           </h2>
           <LoveMap />
@@ -276,9 +303,19 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         
         {/* Footer */}
         <footer className="text-center pt-8 pb-4">
-          <p className="font-romantic text-2xl text-rose/60">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Star className="w-3 h-3 text-gold/40" />
+            <Heart className="w-4 h-4 text-cafe/40 fill-cafe/20" />
+            <Star className="w-3 h-3 text-gold/40" />
+          </div>
+          <p className="font-romantic text-2xl text-cafe/70">
             Te amo infinitamente
           </p>
+          <div className="flex items-center justify-center gap-2 mt-3">
+            <Flower2 className="w-4 h-4 text-lily-green/50" />
+            <BookHeart className="w-4 h-4 text-cafe/40" />
+            <Flower2 className="w-4 h-4 text-lily-green/50" />
+          </div>
         </footer>
       </main>
       

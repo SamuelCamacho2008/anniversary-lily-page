@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Heart, Sparkles } from "lucide-react";
 import LilyDecoration from "@/components/LilyDecoration";
 import LoveLetter from "@/components/LoveLetter";
 import HeartDivider from "@/components/HeartDivider";
-import MusicPlayer from "@/components/MusicPlayer";
+import SpotifyQR from "@/components/SpotifyQR";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import PhotoGallery from "@/components/PhotoGallery";
 import Promises from "@/components/Promises";
@@ -16,7 +16,7 @@ import lilyDecoration from "@/assets/lily-decoration.png";
 import primerEncuentro from "@/assets/primer-encuentro.jpg";
 import momentosFavoritos from "@/assets/momentos-favoritos.jpg";
 import gatosFuturo from "@/assets/gatos-futuro.png";
-import musica from "@/assets/musica.mp3";
+
 import momento1 from "@/assets/momentos/momento-1.jpg";
 import momento2 from "@/assets/momentos/momento-2.jpg";
 import momento3 from "@/assets/momentos/momento-3.jpg";
@@ -65,23 +65,13 @@ const galleryPhotos = [
 
 const Index = () => {
   const [showContent, setShowContent] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
   const handleEnter = () => {
     setShowContent(true);
-    // Reproducir música automáticamente al entrar
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
   };
 
   if (!showContent) {
-    return (
-      <>
-        <audio ref={audioRef} src={musica} loop />
-        <WelcomeScreen onEnter={handleEnter} />
-      </>
-    );
+    return <WelcomeScreen onEnter={handleEnter} />;
   }
   // Aquí puedes personalizar el contenido de la carta
   const letterContent = `Mi amor,
@@ -293,7 +283,7 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
       </main>
       
       {/* Music Player */}
-      <MusicPlayer audioSrc={musica} songTitle="Preso en la cárcel de tus besos - José José" audioRef={audioRef} />
+      <SpotifyQR songTitle="Amor Mío" artist="Frank Sark" />
     </div>
   );
 };

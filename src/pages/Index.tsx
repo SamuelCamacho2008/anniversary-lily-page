@@ -282,8 +282,8 @@ Soy tuyo y lo seguiré siendo. Te amo con todo el corazón.`;
         </footer>
       </main>
       
-      {/* Music Player */}
-      <SpotifyQR songTitle="Amor Mío" artist="Frank Sark" />
+      {/* Música / QR Spotify */}
+      <SpotifyQR />
     </div>
   );
 };
